@@ -19,5 +19,6 @@ bower_components/
 # Modules
 node_modules/
 
-# gulp-gh-pages 
+# gulp-gh-pages
+dist/ 
 .publish

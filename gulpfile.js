@@ -3,7 +3,7 @@ var gulp = require("gulp"),
 
 
 gulp.task('deploy', function () {
-  return gulp.src("./**/*")
+  return gulp.src("dist/**/*")
     .pipe(deploy())
 });
 
