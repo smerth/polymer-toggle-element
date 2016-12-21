@@ -1,0 +1,56 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="icon-toggle.html">
+
+
+<dom-module id="icon-toggle-demo">
+  <template>
+    <style>
+      :host {
+        font-family: sans-serif;
+        --icon-toggle-color: lightgrey;
+        --icon-toggle-outline-color: black;
+        --icon-toggle-pressed-color: red;
+      };
+    </style>
+  
+    <h2>Icon Toggle Demo</h2>
+
+    <p>The icon-toggle-demo element is imported into index.</p> 
+    <p>And the icon-toggle element in imported into the icon-toggle-demo.</p>
+    <p>This just demostrates the nesting of elements.</p>
+    <p>Each import of an element can be set with different configuration.</p>
+    <p>Of course you can import the icon-demo element directly into index.html.</p>
+
+    <h3>Statically-configured icon-toggles</h3>
+  
+    <p>The icon-toggle element is included on the page and the toggle-icon set to "star."</p>
+    <p>The property "pressed" is set on the second usage of the icon-toggle element.</p>
+    <p>These configurations and their behavior are defined in Javascript.</p>
+    
+    <icon-toggle toggle-icon="star"></icon-toggle>
+    <icon-toggle toggle-icon="star" pressed></icon-toggle>
+    
+    <h3>Data-bound icon-toggle</h3>
+
+    <p>In this case a message (some data) is bound to the toggle...</p>
+    <!-- use a computed binding to generate the message -->
+    <div><span>[[message(isFav)]]</span></div>
+
+    <!-- curly brackets ({{}}} allow two-way binding --> 
+    <icon-toggle toggle-icon="favorite" pressed="{{isFav}}"></icon-toggle>
+  </template>
+  
+  <script>
+    Polymer({
+      is: "icon-toggle-demo",
+      message: function(fav) {
+        if (fav) {
+          return "You really like me!";
+        } else {
+          return "Do you like me?";
+        }
+      }
+    });
+  </script>
+</dom-module>
