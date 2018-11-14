@@ -1,54 +1,58 @@
-# Icon Toggle Element
+# Polymer Toggle Element
 
-Built from the CodeLab tutorial
+This element is meant to be included in any other element where a toggle is required.  `icon-toggle.html` defines the icon toggle element.  `icon-toggle-demo` imports the icon toggle and sets some configurable parameters like which icon and what message. Both elements are registered in the `elements.html`
 
-This element is meant to be included in any other element where a toggle is required.
+Finally, either element is printed out in `index.html`, or another page or element...
 
-icon-toggle.html defines the icon toggle element.
+This could be integrated with Firebase Authentication and Firebase Database to keep track of the toggle state for a peice of content or a user.
 
-icon-toggle-demo imports the icon toggle and sets some configurable parameters like which icon and what message.
+## Install
 
-both elements are registered in the elements.html
+You'll need to have node.js, polymer-cli and yarn installed to begin
 
-Finally, either element is printed out in index.html, or another page or element...
+Install bower dependancies
 
-This could be integrated with Firebase Authentication and Firebase Database to keep track of the toggle state on Content for each User.
+```bash
+polymer install
+```
+
+Install gulp to deploy to gh-pages
+
+```bash
+yarn install
+```
+
+## Develop
+
+```bash
+polymer serve
+```
+
+## Build
+
+to build the compiled app
+
+```bash
+polymer build
+```
+
+to serve the built app
+
+```bash
+polymer serve build/default
+```
+
+## Deploy to gh-pages
+
+Set up your codebase on github and then run
+
+```bash
+gulp deploy
+```
 
 
+## Reference
 
-## Your first Polymer element
+- [Build your first Polymer element codelab](http://www.code-labs.io/codelabs/polymer-first-elements/)
 
-This repo goes with the [Build your first Polymer element codelab](http://www.code-labs.io/codelabs/polymer-first-elements/).
-
-The codelab is designed to be used with [Chrome Dev Editor](https://chrome.google.com/webstore/detail/chrome-dev-editor-develop/pnoffddplpippgcfjdhbmhkofpnaalpg?hl=en).
-See the next section if you'd like to use another editor for the codelab.
-
-### Running the codelab without Chrome Dev Editor
-
-If you're not using CDE, you'll need to install some command-line tools to manage
-dependencies and to run the demo.
-
-1.  Download and install Node from [https://nodejs.org/](https://nodejs.org/). Node includes the node package manager command, `npm`.
-
-2.  Install `bower` and `polyserve`:
-
-        npm install -g bower polymer-cli
-
-3.  Clone this repo:
-
-        https://github.com/googlecodelabs/polymer-first-elements.git
-        
-4.  Change directory to your local repo and install dependencies with `bower`:
-
-        cd polymer-first-elements
-        bower install
-        
-5.  To preview your element, run `polymer serve` from the repo directory:
-
-        polymer serve
-        
-    Open `localhost:8080/components/icon-toggle/demo/` in your browser. (Note that the path uses `icon-toggle`—the 
-    component name listed in this element's `bower.json` file—rather than the actual directory name.) 
-    
-If you're wondering what `polymer serve` does, see [Testing elements with local bower dependencies](https://www.polymer-project.org/1.0/docs/start/reusableelements.html#local-dependencies) 
-in the Polymer docs. 
+- If you're wondering what `polymer serve` does, see [Testing elements with local bower dependencies](https://www.polymer-project.org/1.0/docs/start/reusableelements.html#local-dependencies)  in the Polymer docs. 
