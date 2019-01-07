@@ -29,7 +29,7 @@
     <p>These configurations and their behavior are defined in Javascript.</p>
     
     <icon-toggle toggle-icon="star"></icon-toggle>
-    <icon-toggle toggle-icon="star" pressed></icon-toggle>
+    <icon-toggle toggle-icon="star" pressed=""></icon-toggle>
     
     <h3>Data-bound icon-toggle</h3>
 
@@ -41,16 +41,14 @@
     <icon-toggle toggle-icon="favorite" pressed="{{isFav}}"></icon-toggle>
   </template>
   
-  <script>
-    Polymer({
-      is: "icon-toggle-demo",
-      message: function(fav) {
-        if (fav) {
-          return "You really like me!";
-        } else {
-          return "Do you like me?";
-        }
-      }
-    });
-  </script>
+  <script>Polymer({
+  is: "icon-toggle-demo",
+  message: function (fav) {
+    if (fav) {
+      return "You really like me!";
+    } else {
+      return "Do you like me?";
+    }
+  }
+});</script>
 </dom-module>

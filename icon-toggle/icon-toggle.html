@@ -25,27 +25,25 @@
     </iron-icon>
   </template>
 
-  <script>
-  Polymer({
-    /* this is the element's prototype */
-    is: 'icon-toggle',
-    properties: {
-      toggleIcon: String,      
-      pressed: {
-        type: Boolean,
-        value: false,
-        notify: true,
-        reflectToAttribute: true
-      }
-    },
-    listeners: {
-      'tap': 'toggle'
-    },
-    toggle: function() {
-      this.pressed = !this.pressed;
-    },
-  });
-  </script>
+  <script>Polymer({
+  /* this is the element's prototype */
+  is: 'icon-toggle',
+  properties: {
+    toggleIcon: String,
+    pressed: {
+      type: Boolean,
+      value: false,
+      notify: true,
+      reflectToAttribute: true
+    }
+  },
+  listeners: {
+    'tap': 'toggle'
+  },
+  toggle: function () {
+    this.pressed = !this.pressed;
+  }
+});</script>
 
 </dom-module>
 
